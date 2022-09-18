@@ -1,0 +1,24 @@
+{
+  "name": "algodataparty",
+  "version": "1.0.0",
+  "description": "Common datastructures and algorithems implemented in typescript",
+  "main": "index.ts",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "algodataparty"
+  },
+  "keywords": [
+    "datastrutures",
+    "algorithems"
+  ],
+  "author": "Oliver Bhm",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
+    "eslint": "^8.23.1"
+  }
+}
