@@ -1,4 +1,10 @@
 /**
+ * A radom boolean value
+ * @returns
+ */
+export const randomBoolean = () => Boolean(randomInt(0, 1));
+
+/**
  * Returns a random int between min (inclusive) and max (inclusive)
  * @param min
  * @param max
