@@ -4,7 +4,10 @@
   "description": "Common datastructures and algorithems implemented in typescript",
   "main": "index.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test-dev": "jest --watchAll",
+    "prettier-check": "prettier --check .",
+    "prettier-write": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -24,6 +27,7 @@
     "@typescript-eslint/eslint-plugin": "^5.37.0",
     "@typescript-eslint/parser": "^5.37.0",
     "babel-jest": "^29.0.3",
-    "eslint": "^8.23.1"
+    "eslint": "^8.23.1",
+    "prettier": "2.7.1"
   }
 }
