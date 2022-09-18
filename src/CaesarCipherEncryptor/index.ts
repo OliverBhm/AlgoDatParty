@@ -1,5 +1,3 @@
-import { generateCharIndexPairs } from '../library/util/Generate';
-
 /**
  * Encrypts a lower case string using the CaesarCipherEncryptor algorithm.
  * @param haystack the lowercase string to encrypt.
@@ -7,12 +5,11 @@ import { generateCharIndexPairs } from '../library/util/Generate';
  * It will also wrap around the alphabet e.g. encrypt('a', 28) --> 'c'.
  * @returns
  */
-export function encrypt(haystack, shift) {
-  const keys: Map<string, number> = generateCharIndexPairs();
-
+export function encrypt(haystack, shift): string {
   return [...haystack].reduce(
-    (encrypted: string, char: string) =>
-      encrypted + String.fromCharCode(((keys.get(char) + shift) % 26) + 97),
+    (encrypted: string, c: string, i: number) =>
+      encrypted +
+      String.fromCharCode(((haystack.charCodeAt(i) - 97 + shift) % 26) + 97),
     '',
   );
 }

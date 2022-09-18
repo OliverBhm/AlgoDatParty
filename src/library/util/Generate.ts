@@ -12,17 +12,3 @@ export const generateAlphabet = (
     String.fromCharCode(getACharCode(isUppercase) + i),
   );
 };
-
-/**
- * Generates a map of char index pairs.
- * @returns [[a, 0], [b, 1]...]
- */
-export const generateCharIndexPairs = (
-  isUppercase: boolean = false,
-): Map<string, number> =>
-  new Map<string, number>(
-    Array.from({ length: 26 }, (v: undefined, i: number) => [
-      String.fromCharCode(getACharCode(isUppercase) + i),
-      i,
-    ]),
-  );
