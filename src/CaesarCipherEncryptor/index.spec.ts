@@ -8,13 +8,4 @@ describe('CaesarCipherEncryptor', () => {
   it('should wrap on overflow', () => {
     expect(encrypt('xyz', 2)).toEqual('zab');
   });
-
-  /*it('', () => {
-    for (let i = 0; i < 1000; i++) {
-      const randomShift: number = randomInt(0, 1000);
-      const hay: string = randomString(10);
-      const encrypted: string = encrypt(hay, randomShift);
-      expect(decrypt(encrypted, randomShift)).toEqual(hay);
-    }
-  });*/
 });

@@ -13,12 +13,3 @@ export function encrypt(haystack, shift): string {
     '',
   );
 }
-
-export function decrypt(haystack, shift): string {
-  let result: string = '';
-  for (let i: number = 0; i < haystack.length; i++) {
-    const cypherKey: number = haystack.charCodeAt(i) + 97 - (shift % 26);
-    result += String.fromCharCode(cypherKey + 97);
-  }
-  return result;
-}
