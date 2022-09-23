@@ -9,4 +9,8 @@ describe('isPalindrome', () => {
       expect(isPalindrome(`${test}${reversed}`)).toBeTruthy();
     }
   });
+  
+  it('should check if a short string is a palindrome', () => {
+      expect(isPalindrome('a')).toBeTruthy();
+  });
 });
