@@ -11,7 +11,6 @@ export const randomBoolean = () => Boolean(randomInt(0, 1));
  * @param min
  * @param max
  * @returns
-
 /**
  * Generates a random interger between min (inclusive) and max (inclusive)
  * @param min
