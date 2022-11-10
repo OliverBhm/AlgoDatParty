@@ -11,6 +11,12 @@ export const randomBoolean = () => Boolean(randomInt(0, 1));
  * @param min
  * @param max
  * @returns
+
+/**
+ * Generates a random interger between min (inclusive) and max (inclusive)
+ * @param min
+ * @param max
+ * @returns A random integer
  */
 export function randomInt(min: number, max: number): number {
   min = Math.ceil(min);
