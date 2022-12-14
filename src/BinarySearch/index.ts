@@ -18,11 +18,11 @@ function binarySearch<T>(
   haystack: Array<T>,
   comparisonFn: (value: T) => number
 ): number {
-  let start = 0;
-  let end = haystack.length - 1;
+  let start: number = 0;
+  let end: number = haystack.length - 1;
   while (start <= end) {
-    const mid = Math.floor((start + end) / 2);
-    const comparison = comparisonFn(haystack[mid]);
+    const mid: number = Math.floor((start + end) / 2);
+    const comparison: number = comparisonFn(haystack[mid]);
     if (comparison > 0) {
       start = mid + 1;
     } else if (comparison < 0) {
