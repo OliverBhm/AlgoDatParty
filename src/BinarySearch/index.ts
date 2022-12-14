@@ -14,7 +14,7 @@
    binarySearch(haystack, (({ name }) => 'Gamma'.localeCompare(name))) // 2
  * @returns The index of the element `-1` if there is no match.
  */
-   function binarySearch<T>(haystack: Array<T>, comparisonFn: (value: T) => number) {
+   function binarySearch<T>(haystack: Array<T>, comparisonFn: (value: T) => number): number {
     let start = 0;
     let end = haystack.length - 1;
     while (start <= end) {
