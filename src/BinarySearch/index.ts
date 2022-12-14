@@ -18,8 +18,8 @@
     let start = 0;
     let end = haystack.length - 1;
     while (start <= end) {
-        var mid = Math.floor((start + end)/2);
-        var comparison = comparisonFn(haystack[mid]);
+        const mid = Math.floor((start + end)/2);
+        const comparison = comparisonFn(haystack[mid]);
         if (comparison > 0) {
           start = mid + 1;
         } else if(comparison < 0) {
