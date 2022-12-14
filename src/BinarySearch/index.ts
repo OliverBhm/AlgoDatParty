@@ -1,5 +1,5 @@
 /**
- * Finds an element in an array.
+ * Finds the index of an element in an array.
  * @param haystack A sorted array
  * @param comparisonFn Function used to determine how to travers the array to find the `target`. 
  * It is expected to return a negative value if the element is less than the `target`, zero if 
