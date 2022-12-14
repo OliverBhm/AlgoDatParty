@@ -14,25 +14,28 @@
    binarySearch(haystack, (({ name }) => 'Gamma'.localeCompare(name))) // 2
  * @returns The index of the element `-1` if there is no match.
  */
-   function binarySearch<T>(haystack: Array<T>, comparisonFn: (value: T) => number): number {
-    let start = 0;
-    let end = haystack.length - 1;
-    while (start <= end) {
-        const mid = Math.floor((start + end)/2);
-        const comparison = comparisonFn(haystack[mid]);
-        if (comparison > 0) {
-          start = mid + 1;
-        } else if(comparison < 0) {
-          end = mid - 1;
-        } else {
-            return mid;
-        }
+function binarySearch<T>(
+  haystack: Array<T>,
+  comparisonFn: (value: T) => number
+): number {
+  let start = 0;
+  let end = haystack.length - 1;
+  while (start <= end) {
+    const mid = Math.floor((start + end) / 2);
+    const comparison = comparisonFn(haystack[mid]);
+    if (comparison > 0) {
+      start = mid + 1;
+    } else if (comparison < 0) {
+      end = mid - 1;
+    } else {
+      return mid;
     }
-    
-    return -start - 1;
   }
 
-  /**
+  return -start - 1;
+}
+
+/**
  * Finds an element in an array.
  * @param haystack A sorted array
  * @param comparisonFn Function used to determine how to travers the array to find the `target`. 
@@ -48,7 +51,9 @@
    binarySearch(haystack, (({ name }) => 'Gamma'.localeCompare(name))) // { name: Gamma}
  * @returns The the element `undefined` if there is no match.
  */
-   function binarySearchElement<T>(haystack: Array<T>, comparisonFn: (value: T) => number): T | undefined 
-   {
-      return haystack[binarySearch(haystack, comparisonFn)] || undefined
-   }
+function binarySearchElement<T>(
+  haystack: Array<T>,
+  comparisonFn: (value: T) => number
+): T | undefined {
+  return haystack[binarySearch(haystack, comparisonFn)] || undefined;
+}
